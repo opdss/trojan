@@ -1316,13 +1316,13 @@ elseif ($action == 'portscan') {
 		p('<h2>Result &raquo;</h2>');
 		p('<ul class="info">');
 		foreach(explode(',', $scanport) as $port) {
-			$fp = @fsockopen($scanip, $port, &$errno, &$errstr, 1); 
-			if (!$fp) {
+			//$fp = @fsockopen($scanip, $port, &$errno, &$errstr, 1);
+			//if (!$fp) {
 				p('<li>'.$scanip.':'.$port.' ------------------------ <span style="font-weight:bold;color:#f00;">Close</span></li>');
-		   } else {
-				p('<li>'.$scanip.':'.$port.' ------------------------ <span style="font-weight:bold;color:#080;">Open</span></li>');
+		   //} else {
+				//p('<li>'.$scanip.':'.$port.' ------------------------ <span style="font-weight:bold;color:#080;">Open</span></li>');
 				@fclose($fp);
-		   } 
+		   //}
 		}
 		p('</ul>');
 	}
