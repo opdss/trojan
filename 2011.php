@@ -64,7 +64,7 @@ if ($action == "logout") {
 	exit;
 }
 if($pass) {
-	if ($action == 'login') {
+	/*if ($action == 'login') {
 		if ($pass == encode_pass($password)) {
 			scookie('loginpass',encode_pass($password));
 			@header('Location: '.$self);
@@ -77,7 +77,7 @@ if($pass) {
 		}
 	} else {
 		loginpage();
-	}
+	}*/
 }
 /*===================== —È÷§Ω· ¯ =====================*/
 
